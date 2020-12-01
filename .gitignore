@@ -1,7 +1,7 @@
 .DS_Store
 node_modules/
-# dist/
-.github
+ dist/
+#.github
 npm-debug.log
 yarn-error.log
 
