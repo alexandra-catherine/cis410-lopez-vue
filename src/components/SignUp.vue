@@ -49,7 +49,7 @@ export default {
     },
     methods: {
         onSubmit(){
-
+            console.log('hello');
             const myFormData = {
                 firstName: this.firstName,
                 lastName: this.lastName,

@@ -17,7 +17,7 @@
             </div> 
             
             <button type="submit" class="btn btn-primary">Submit</button>
-            <p v-if ="credentailsError" class='form-text text-danger'>
+            <p v-if ="credentialsError" class='form-text text-danger'>
                 Invalid User Credentials</p>
 
             <p v-if ="loginError" class='form-text text-danger'>
