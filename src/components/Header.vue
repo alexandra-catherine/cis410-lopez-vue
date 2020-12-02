@@ -13,23 +13,23 @@
         <router-link class="nav-link" to='/workouttype'>Workout Types</router-link>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item" v-if="auth">
         <router-link class="nav-link" to='/account'>My Account</router-link>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item" v-if="!auth">
         <router-link class="nav-link" to='/login'><button class = 'btn btn-danger'> Sign in </button></router-link>
         
       </li>
 
-       <li class="nav-item">
+       <li class="nav-item" v-if="!auth">
         <router-link class="nav-link" to='/signup'>
         <button class = 'btn btn-outline-danger '> Sign up </button>
         </router-link>
       </li>
 
-      <li class="nav-item">
-        <button class = 'btn btn-outline-danger'> Log out</button>
+      <li class="nav-item" v-if="auth">
+        <button @click="onLogout" class = 'btn btn-outline-danger'> Log out</button>
       </li>
       
     </ul>
@@ -41,7 +41,12 @@
 
 <script>
 export default {
-    
+    computed:{
+      auth(){return this.$store.state.token}
+    },
+    methods:{
+      onLogout(){this.$store.dispatch('logout')}
+    }
 }
 </script>
 

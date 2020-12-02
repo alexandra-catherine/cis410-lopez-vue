@@ -9,13 +9,20 @@ import WorkoutTypeDetails from "./components/WorkoutTypeDetails.vue";
 import NotFound from "./components/NotFound.vue";
 import CreateWorkout from "./components/CreateWorkout.vue";
 import SignUp from "./components/SignUp.vue";
-
+import store from './store.js';
 Vue.use(VueRouter);
 
 
 const routes = [
     {path: '/', component: Home},
-    {path: '/account', component: Account},
+    {path: '/account', component: Account, beforeEnter(to, from, next){
+        if(store.state.token){
+            next()
+        }
+        else{
+            next('/login')
+        }
+    }},
     {path: '/login', component: Login},
     {path: '/workouttype', component: WorkoutType},
     {path: '/workouttype/:pk', component: WorkoutTypeDetails,
