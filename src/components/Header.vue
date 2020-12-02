@@ -18,18 +18,18 @@
       </li>
 
       <li class="nav-item">
-        <router-link class="nav-link" to='/login'><button class = 'btn btn-warning'> Sign in </button></router-link>
+        <router-link class="nav-link" to='/login'><button class = 'btn btn-danger'> Sign in </button></router-link>
         
       </li>
 
        <li class="nav-item">
         <router-link class="nav-link" to='/signup'>
-        <button class = 'btn btn-outline-warning text-dark'> Sign up </button>
+        <button class = 'btn btn-outline-danger '> Sign up </button>
         </router-link>
       </li>
 
       <li class="nav-item">
-        <button class = 'btn btn-outline-warning'> Log out</button>
+        <button class = 'btn btn-outline-danger'> Log out</button>
       </li>
       
     </ul>
