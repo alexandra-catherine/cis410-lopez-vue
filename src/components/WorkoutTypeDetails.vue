@@ -23,6 +23,9 @@
         <router-link v-else :to="`/login`">
             <button type="button" class="btn btn-outline-danger">Sign in to add this Workout</button>
         </router-link>
+        
+        <br/>
+        <router-view></router-view>
 
     </div>
 </template>
