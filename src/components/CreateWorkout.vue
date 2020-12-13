@@ -56,7 +56,7 @@ export default {
                 activeCalories: this.activeCalories,
                 activeDistance: this.activeDistance,
                 averageBPM: this.averageBPM,
-                workoutTypeID: this.$routes.params.pk
+                workoutTypeID: this.$route.params.pk
             };
             console.log("here is the new workout", myNewWorkout)
 

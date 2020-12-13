@@ -27,8 +27,8 @@ const routes = [
     {path: '/workouttype', component: WorkoutType},
     {path: '/workouttype/:pk', component: WorkoutTypeDetails,
         children: [
-            {path: '/create', component: CreateWorkout}
-        ],
+            {path: 'create', component: CreateWorkout}
+        ]
     },
     {path: '/signup', component: SignUp},
     {path: '/:invalidroute(.*)', component: NotFound}

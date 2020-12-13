@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <router-link v-if="auth" :to="`/workoutType/${this.$route.params.pk}/create`">
+        <router-link v-if="auth" :to="`/workouttype/${this.$route.params.pk}/create`">
             <button type="button" class="btn btn-danger">New Workout</button>
         </router-link>
 
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+//import axios from 'axios';
 export default {
     computed:{
         workoutType(){
